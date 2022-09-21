@@ -1,0 +1,22 @@
+﻿
+@model string;
+
+@{
+    ViewData["Title"] = "Editando Admin";
+}
+
+<div class="row mt-5">
+    <div class="col-6 offset-3">
+        
+            <div class="card-body">
+
+                <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
+                    <h1>@Model </h1>
+                    <a class="btn btn-primary" asp-controller="Admin" asp-action="Index"> Volver atras</a>
+                </div>
+
+            </div>
+        
+    </div>
+</div>
+

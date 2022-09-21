@@ -1,0 +1,68 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.TipoPropiedadCategory;
+
+@model List<TipoPropiedadVm>
+
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<div class="container text-white">
+
+    <div class=" col-md-12 float-end">
+        <a asp-controller="Agente" asp-action="Mantenimiento"
+           class="btn btn-danger float-end mx-3">volver atras</a>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-6 mt-2">
+            <div class="card bg-dark text-white text-center">
+                <div class="card-title">
+                    <h3 class="card-text fw-bold ">Tipos de propiedades</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12 mt-2">
+
+                <div class="container-fluid text-white">
+
+                    <div class="row">
+
+                        @if (Model.Count == 0 || Model == null)
+                        {
+                            <h3> No hay propiedades creadas </h3>
+                        }
+                        else
+                        {
+
+                            @foreach (TipoPropiedadVm item in Model)
+                            {
+
+                                <div class="col-4 mb-3">
+
+                                    <div class="card bg-dark bg-opacity-50 animate__animated animate__fadeIn">
+
+                                        <div class="card-body">
+                                            <h5 class="text-center"> @item.Name </h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+                        }
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

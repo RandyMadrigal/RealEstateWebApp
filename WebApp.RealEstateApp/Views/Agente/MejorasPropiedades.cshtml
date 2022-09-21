@@ -1,0 +1,67 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.MejorasCategory;
+
+@model List<MejorasVm>
+
+@{
+    ViewData["Title"] = "Mejoras de las propiedades";
+}
+
+<div class="container text-white">
+
+    <div class=" col-md-12 float-end">
+        <a asp-controller="Agente" asp-action="Mantenimiento"
+           class="btn btn-danger float-end mx-3">volver atras</a>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-6 mt-2">
+            <div class="card bg-dark text-white text-center">
+                <div class="card-title">
+                    <h3 class="card-text fw-bold ">Mejoras de las propiedades</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12 mt-2">
+
+                <div class="container-fluid text-white">
+
+                    <div class="row">
+
+                        @if (Model.Count == 0 || Model == null)
+                        {
+                            <h4> No hay propiedades creadas </h4>
+                        }
+                        else
+                        {
+
+                            @foreach (MejorasVm item in Model)
+                            {
+
+                                <div class="col-4 mb-3">
+
+                                    <div class="card bg-dark bg-opacity-50 animate__animated animate__fadeIn">
+
+                                        <div class="card-body">
+                                            <h4 class="text-center"> @item.Name </h4>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+                        }
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

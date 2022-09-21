@@ -1,0 +1,205 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.Propiedades
+@using RealEstateApp.Infrastructure.Identity.Entities
+
+@using Microsoft.AspNetCore.Http
+@using RealEstateApp.Core.Application.Dtos.Account
+@using RealEstateApp.Core.Application.Helpers;
+@using RealEstateApp.Core.Application.ViewModels.User
+@inject IHttpContextAccessor httpContextAccessor
+
+@model ApplicationUser
+
+@{
+    ViewData["Title"] = "Details";
+
+    var User = httpContextAccessor.HttpContext.Session.Get<AuthenticationResponse>("user");
+    var isAdmin = User != null ? User.Roles.Any(r => r == "Admin") : false;
+    var isClient = User != null ? User.Roles.Any(r => r == "Client") : false;
+    var isAgent = User != null ? User.Roles.Any(r => r == "Agent") : false;
+}
+
+<div class="container-fluid">
+
+    <div class="col-md-12 col-sm-6 my-3">
+        <div class="card bg-dark bg-opacity-25 text-white text-center">
+            <div class="card-title">
+                <h3 class="card-text fw-bold ">Detalles</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-8 mb-3">
+
+            <div class="card bg-dark bg-opacity-25 text-white">
+
+                @foreach (PropiedadesVm item in ViewBag.Propiedad)
+                {
+                    <div class="card-title">
+
+                        <p class="card-text fs-4 text-center"> <strong>Codigo:</strong> @item.Codigo </p>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <p class="card-text fs-4"> <strong>Tipo de propiedad:</strong> @item.TipoPropiedadName  </p>
+
+                                <div class="d-flex w-50 justify-content-between ">
+
+                                    <i class="fa-solid fa-building"> @item.Dimensiones Mts </i>
+
+                                    <i class="fa-solid fa-bed"> @item.CantidadHabitaciones </i>
+
+                                    <i class="fa-solid fa-toilet"> @item.CantidadBaños </i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <p class="card-text fs-4"> <strong>Tipo de venta:</strong> @item.TipoVentaName </p>
+
+                                <p class="card-text fs-4"> <strong>Costo:</strong> RD$@item.Precio </p>
+
+                            </div>
+
+                        </div>
+
+                        <p class="card-text fs-4"> <strong>Descripcion:</strong> @item.Descripcion </p>
+
+                    </div>
+
+                }
+
+                @if (User != null)
+                {
+                    if (isAgent)
+                    {
+                        <div class="mb-2">
+                            <a asp-controller="Agente" asp-action="Index"
+                               class="btn btn-outline-info btn-sm float-end mx-3"> volver atras </a>
+                        </div>
+                    }
+
+                    if (isClient)
+                    {
+                        <div class="mb-2">
+                            <a asp-controller="Cliente" asp-action="Index"
+                               class="btn btn-outline-info btn-sm float-end mx-3"> volver atras </a>
+                        </div>
+                    }
+
+                }
+
+                @if (User == null)
+                {
+                    <div class="mb-2">
+                        <a asp-controller="Home" asp-action="Index"
+                           class="btn btn-outline-info btn-sm float-end mx-3"> volver atras </a>
+                    </div>
+                }
+
+
+
+            </div>
+
+            <div class="card bg-dark bg-opacity-25 text-white my-3">
+
+                <div class="card-title">
+                    <p class="card-text fs-4 fw-bold text-center"> Mejoras </p>
+                </div>
+
+                <div class="card-body">
+
+                    @foreach (PropiedadesVm item in ViewBag.Propiedad)
+                    {
+                        <p class="card-text fs-4"> <strong> Listado de mejoras:  </strong> @item.TipoMejorasName </p>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4 bg-dark bg-opacity-50">
+
+            <div id="DetailsCarousel" class="carousel carousel-dark slide mt-3 border border-white  " data-ride="carousel">
+
+                <p class="fw-bold fs-4 text-white mx-2">Imagenes de la propiedad</p>
+
+                <div class="carousel-inner animate__animated animate__fadeIn">
+
+                    @foreach (PropiedadesVm item in ViewBag.Propiedad)
+                    {
+
+                        <div class="carousel-item active" data-bs-interval="1000">
+                            <img src="@item.ImgMain" class="rounded mx-auto d-block text-white img-size-details" alt="no hay imagen disponible"
+                                 height="500"
+                                 width="600">
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="@item.Img2" class="rounded mx-auto d-block text-white img-size-details" alt="no hay imagen disponible"
+                                 height="500"
+                                 width="600">
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="@item.Img3" class="rounded mx-auto d-block text-white img-size-details" alt="no hay imagen disponible"
+                                 height="500"
+                                 width="600">
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="1000">
+                            <img src="@item.Img4" class="rounded mx-auto d-block text-white img-size-details" alt="no hay imagen disponible"
+                                 height="500"
+                                 width="600">
+                        </div>
+                    }
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#DetailsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#DetailsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+            <div class="card fw-bold bg-transparent text-white mt-2 border border-white">
+
+                <p class="fw-bold fs-4 text-white mx-2">Agente inmobiliario</p>
+
+                <img src="@Model.Url" alt="Imagen agente" class="rounded mx-auto d-block img-size-perfil">
+
+                <div class="card-body">
+                    <p class="card-text "> <strong> </strong> @Model.FirstName @Model.LastName </p>
+                    <p class="card-text "> <strong>Celular:</strong> @Model.PhoneNumber </p>
+                    <p class="card-text "> <strong>Correo:</strong> @Model.Email </p>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+
+

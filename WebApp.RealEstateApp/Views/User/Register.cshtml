@@ -1,0 +1,134 @@
+﻿@using Microsoft.AspNetCore.Http
+@using RealEstateApp.Core.Application.Dtos.Account
+@using RealEstateApp.Core.Application.Helpers;
+@using RealEstateApp.Core.Application.ViewModels.User
+@inject IHttpContextAccessor httpContextAccessor
+
+@model SaveUserViewModel
+@{
+    var User = httpContextAccessor.HttpContext.Session.Get<AuthenticationResponse>("user");
+    var isAdmin = User != null ? User.Roles.Any(r => r == "Admin") : false;
+    var isDev = User != null ? User.Roles.Any(r => r == "Developer") : false;
+    ViewData["Title"] = "Registro";
+}
+
+<div class="container-fluid mt-5">
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="card">
+                <div class="card-header bg-dark text-light">
+                    <h4>Registro de nuevo usuario</h4>
+                </div>
+                <div class="card-body">
+
+                    @if (Model.HasError)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <p>@Model.Error</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+                <form method="post" asp-controller="User" asp-action="Register" enctype="multipart/form-data">
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3">
+                                <label asp-for="FirstName" class="form-label">Nombre: </label>
+                                <input asp-for="FirstName" class="form-control" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="PhoneNumber" class="form-label">Telefono: </label>
+                                <input asp-for="PhoneNumber" class="form-control" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Username" class="form-label">Usuario: </label>
+                                <input asp-for="Username" class="form-control" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Password" class="form-label">Contraseña: </label>
+                                <input asp-for="Password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Cedula" class="form-label">Cedula: </label>
+                                <input asp-for="Cedula" class="form-control" />
+                                <span asp-validation-for="Cedula" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="mb-3">
+                                <label asp-for="LastName" class="form-label">Apellido: </label>
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="File" class="form-label">Foto: </label>
+                                <input required asp-for="File" class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Email" class="form-label">Correo: </label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="ConfirmPassword" class="form-label">Confirmar contraseña: </label>
+                                <input asp-for="ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Role" class="form-label">Rol: </label>
+                        <select asp-for="Role" class="form-select">
+
+                            @if (isDev && isAdmin)
+                            {
+                                <option value="Developer">Developer</option>
+                            }
+
+
+                            @if (isAdmin)
+                            {
+                                <option value="Admin">Admin</option>
+                            }
+                            else
+                            {
+                                <option value="">Seleccione un rol</option>
+                                <option value="Agent">Agent</option>
+                                <option value="Client">Client</option>
+
+                            }
+
+                        </select>
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+
+                    @if (isAdmin)
+                    {
+                        <a asp-controller="Admin" asp-action="Administradores" class="btn btn-warning">Volver atras</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="User" asp-action="Index" class="btn btn-warning">Volver atras</a>
+                    }
+
+
+                </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+

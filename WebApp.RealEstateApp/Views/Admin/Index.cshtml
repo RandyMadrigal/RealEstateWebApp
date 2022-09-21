@@ -1,0 +1,108 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.Propiedades
+
+@{
+    if (true)
+    {
+
+    }
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 text-white text-center">
+
+            <h3>Home</h3>
+
+        </div>
+    </div>
+
+    <div class="row my-3">
+
+        <div class="col-md-6 animate__animated animate__fadeIn">
+            <div class="card text-bg-info mb-3 text-center fw-bold fs-4 ">
+                <div class="card-header ">Propiedades Registradas</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                                                          
+                                <p> @ViewBag.Propiedades </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6 animate__animated animate__fadeIn">
+            <div class="card text-bg-info mb-3 text-center fw-bold fs-4">
+                <div class="card-header ">Agentes</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Agentes Activos</p>
+                            <hr />
+                            <p> @ViewBag.ActiveAgente</p>
+                        </div>
+
+                        <div class="col-md-6">
+                            <p>Agentes Inactivos</p>
+                            <hr />
+                            <p> @ViewBag.InactiveAgente </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 animate__animated animate__fadeIn">
+            <div class="card text-bg-info mb-3 text-center fw-bold fs-4">
+                <div class="card-header ">Clientes</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p> Clientes Activos</p>
+                            <hr />
+                            <p>@ViewBag.ActiveCliente</p>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <p> Clientes Inactivos </p>
+                            <hr />
+                            <p>@ViewBag.InactiveCliente</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 animate__animated animate__fadeIn">
+            <div class="card text-bg-info mb-3 text-center fw-bold fs-4">
+                <div class="card-header ">Desarrolladores</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p> Desarrollador Activo</p>
+                            <hr />
+                            <p>@ViewBag.ActiveDeveloper</p>
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <p> Desarrollador Inactivo </p>
+                            <hr />
+                            <p>@ViewBag.InactiveDeveloper</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+

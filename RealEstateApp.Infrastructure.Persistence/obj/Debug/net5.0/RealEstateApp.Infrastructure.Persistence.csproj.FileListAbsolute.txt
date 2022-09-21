@@ -1,0 +1,34 @@
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.deps.json
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\ref\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.pdb
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Application.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Domain.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Application.pdb
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Domain.pdb
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.csproj.AssemblyReference.cache
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.AssemblyInfoInputs.cache
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.AssemblyInfo.cs
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.csproj.CopyComplete
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\ref\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.deps.json
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\ref\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Application.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Domain.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Application.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\bin\Debug\net5.0\RealEstateApp.Core.Domain.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.csproj.AssemblyReference.cache
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.AssemblyInfoInputs.cache
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.AssemblyInfo.cs
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.csproj.CopyComplete
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\ref\RealEstateApp.Infrastructure.Persistence.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Persistence\obj\Debug\net5.0\RealEstateApp.Infrastructure.Persistence.pdb

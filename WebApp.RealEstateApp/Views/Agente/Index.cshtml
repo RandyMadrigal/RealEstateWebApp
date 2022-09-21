@@ -1,0 +1,204 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.Propiedades
+@using RealEstateApp.Core.Application.ViewModels.TipoPropiedadCategory
+
+
+@model List<PropiedadesVm>
+
+@{
+
+    int tipoPropiedades = ViewBag.TipoPropiedad.Count;
+    int tipoVentas = ViewBag.TipoVenta.Count;
+    int mejoraPropiedades = ViewBag.MejorasPropiedades.Count;
+
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-2">
+
+            <div class="card text-white bg-light bg-gradient bg-opacity-10 mb-3 border border-dark">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Filtros</h5>
+
+                    <div>
+                        <hr />
+                    </div>
+
+                    <form asp-controller="Agente" asp-action="Index" method="post">
+                        <div>
+                            <label class="form-label">Tipo de Propiedad</label>
+
+                            <div class="mb-3">
+
+                                <select class="form-select" name="TipoPropiedadName">
+
+                                    <option value="">View all</option>
+
+                                    @foreach (TipoPropiedadVm item in ViewBag.TipoPropiedad)
+                                    {
+                                        <option value="@item.Name">@item.Name</option>
+                                    }
+
+                                </select>
+
+                            </div>
+
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-secondary"> Filtrar </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div>
+                        <hr />
+                    </div>
+
+                    <form method="post" asp-controller="Agente" asp-action="Index">
+                        <div>
+
+                            <label name="PrecioMin" class="form-label">Precio Minimo</label>
+                            <input name="PrecioMin" type="text" class="form-control" placeholder="RD$...">
+
+                        </div>
+
+                        <div>
+
+                            <label name="PrecioMax" class="form-label">"Precio Maximo"</label>
+                            <input type="text" name="PrecioMax" class="form-control" placeholder="RD$...">
+
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-secondary"> Buscar </button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <div>
+                        <hr />
+                    </div>
+
+                    <div>
+                        <form method="post" asp-controller="Agente" asp-action="Index">
+                            <label name="CantidadHabitaciones" class="form-label">Cantidad de habitaciones</label>
+                            <input name="CantidadHabitaciones" type="text" class="form-control" placeholder=".">
+
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-secondary"> Buscar </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div>
+                        <hr />
+                    </div>
+
+                    <div>
+                        <form method="post" asp-controller="Agente" asp-action="Index">
+                            <label name="CantidadBaños" class="form-label">Cantidad de Baños</label>
+                            <input name="CantidadBaños" type="text" class="form-control" placeholder=".">
+
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-secondary"> Buscar </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-9">
+
+            <div class="card text-bg-dark ">
+                <img src="~/Images/App/city.jpg" class="img-fluid img-size-home " alt="...">
+                <div class="card-img-overlay">
+
+                    <div class=" col-md-12 card-title fw-bold ">
+                        <h2 class="float-end">Mis propiedades publicadas</h2>
+                    </div>
+
+
+                    @if (tipoPropiedades < 1 || tipoVentas < 1 || mejoraPropiedades < 1)
+                    {
+                        <div class="col-md-12 float-end">
+                            <a asp-controller="Agente" asp-action="Error" role="button" class="btn btn-danger float-end">Nueva propiedad</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-md-12 float-end">
+                            <a asp-controller="Agente" asp-action="Create" role="button" class="btn btn-primary float-end">Nueva propiedad</a>
+                        </div>
+                    }
+                </div>
+            </div>
+
+
+
+            <div class="row mb-5">
+
+                @if (Model == null || Model.Count == 0)
+                {
+                    <h2 class="text-white mx-5 my-5">No se han creado Propiedades </h2>
+                }
+                else
+                {
+                    @foreach (PropiedadesVm item in Model)
+                    {
+                        <div class="col-md-3 mt-3">
+
+                            <div class="card bg-dark bg-gradient text-white">
+                                <img src="@item.ImgMain" class="img-fluid img-size-perfil" alt="No disponible">
+                                <div class="card-body">
+
+                                    <h6 class="card-title fw-bold text-center"> @item.TipoPropiedadName </h6>
+
+                                    <p class="card-text"> @item.Direccion </p>
+
+                                    <h6 class="fw-bold">Codigo</h6>
+                                    <p class="card-text">  @item.Codigo </p>
+
+
+                                    <p class="card-text fw-bold"> "@item.TipoVentaName" </p>
+                                    <p class="card-text"> RD$ @item.Precio </p>
+
+                                    <div>
+                                        <hr />
+                                    </div>
+
+                                    <div class="d-flex justify-content-around">
+
+                                        <i class="fa-solid fa-building"> @item.Dimensiones Mts </i>
+
+                                        <i class="fa-solid fa-bed"> @item.CantidadHabitaciones </i>
+
+                                        <i class="fa-solid fa-toilet"> @item.CantidadBaños </i>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card-footer bg-dark bg-gradient">
+
+                                <a class="btn btn-sm btn-outline-warning" asp-controller="Agente" asp-action="Edit" asp-route-Codigo="@item.Codigo">Editar</a>
+                                <a class="btn btn-sm btn-outline-danger" asp-controller="Agente" asp-action="Delete" asp-route-Codigo="@item.Codigo">Borrar</a>
+                            </div>
+
+
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+

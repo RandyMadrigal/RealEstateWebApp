@@ -1,0 +1,81 @@
+﻿@using RealEstateApp.Infrastructure.Identity.Entities
+
+@model List<ApplicationUser>;
+
+@{
+    ViewData["Title"] = "Agentes";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-2">
+
+            <div class="card text-bg-dark ">
+                <img src="~/Images/App/agente.jpg" class="img-fluid img-size-home " alt="...">
+                <div class="card-img-overlay">
+
+                    <div class=" col-md-12 card-title fw-bold ">
+                        <h2 class="float-end">Listado de Agentes</h2>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 my-3">
+
+                <form method="post", asp-controller="Home" asp-action="Agentes">
+
+                    <div class="d-flex justify-content-between my-2">
+
+                        <input type="text" name="FirstName" class="form-control" placeholder="Buscar Agente">
+
+                        <button type="submit" class="btn btn-primary mx-2"> Buscar </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <hr class="border border-warning" />
+</div>
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        @if (ViewBag.propiedadesVm is null)
+        {
+        <p> No hay agentes registrados con ese nombre  </p> 
+        }
+        else
+        {
+            @foreach (ApplicationUser item in ViewBag.propiedadesVm)
+            {
+                if (@item.EmailConfirmed == true)
+                {
+                    <div class="col-md-2">
+                        <div class="card bg-dark bg-gradient text-white">
+                            <img src="@item.Url" class="rounded mx-auto d-block img-size-agente" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">@item.UserName</h5>
+                                <h5 class="card-title">@item.FirstName @item.LastName</h5>
+                                <a asp-controller="Home" asp-action="Propiedades" asp-route-UserName="@item.UserName" class="btn btn-primary float-end my-2">Ver propiedades</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        }
+
+    </div>
+
+</div>
+
+
+
+

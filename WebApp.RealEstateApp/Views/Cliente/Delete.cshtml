@@ -1,0 +1,30 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.Favorite
+
+@model SaveFavoriteVm
+@{
+    ViewData["Title"] = "Eliminar De favoritos";
+}
+
+<div class="row">
+
+    <div class="col-8 offset-2">
+        <div class="card bg-dark bg-gradient text-light text-center">
+            <div class="card-header ">
+                <h4>Estas seguro que deseas eliminar la propiedad: @Model.Codigo de tu lista de Favoritos? </h4>
+            </div>
+            <div class="card-body">
+
+                <form method="post" asp-controller="Cliente" asp-action="DeletePost">
+
+                    <input type="hidden" asp-for="Id" />
+
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                    <a asp-controller="Cliente" asp-action="Propiedades" class="btn btn-warning">Cancelar</a>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

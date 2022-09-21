@@ -1,0 +1,40 @@
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.deps.json
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.runtimeconfig.json
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.runtimeconfig.dev.json
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\ref\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.pdb
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Application.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Domain.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Application.pdb
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Domain.pdb
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.csproj.AssemblyReference.cache
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.AssemblyInfoInputs.cache
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.AssemblyInfo.cs
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.csproj.CoreCompileInputs.cache
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.csproj.CopyComplete
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\ref\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.pdb
+C:\Users\JuPegro\source\repos\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.genruntimeconfig.cache
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.deps.json
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.runtimeconfig.json
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.runtimeconfig.dev.json
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\ref\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Infrastructure.Identity.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Application.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Domain.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Application.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\bin\Debug\net5.0\RealEstateApp.Core.Domain.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.csproj.AssemblyReference.cache
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.AssemblyInfoInputs.cache
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.AssemblyInfo.cs
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.csproj.CoreCompileInputs.cache
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.csproj.CopyComplete
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\ref\RealEstateApp.Infrastructure.Identity.dll
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.pdb
+C:\Users\Randy\Desktop\Programacion 3\RealEstateApp\RealEstateApp.Infrastructure.Identity\obj\Debug\net5.0\RealEstateApp.Infrastructure.Identity.genruntimeconfig.cache

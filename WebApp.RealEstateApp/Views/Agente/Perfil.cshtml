@@ -1,0 +1,76 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.User
+
+@model EditUser
+
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-10 offset-1">
+            <div class="card bg-dark text-white text-center">
+                <div class="card-body">
+                    <h4>User info</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-10 offset-1">
+            <div class="card card bg-dark bg-gradient text-white mb-3">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="@Model.Url" class="img-fluid my-5 ms-4 border border-warning img-size-perfil" alt="...">
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="cardtitle">Update Info</h5>
+
+                            <form method="post" asp-controller="Agente" asp-action="Perfil" enctype="multipart/form-data">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label asp-for="FirstName" class="form-label">Nombre </label>
+                                            <input asp-for="FirstName" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="LastName" class="form-label">Apellido</label>
+                                            <input asp-for="LastName" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <label asp-for="PhoneNumber" class="form-label">Phone</label>
+                                            <input asp-for="PhoneNumber" class="form-control">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label asp-for="File" class="form-label">Foto: </label>
+                                            <input required asp-for="File" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" asp-for="Id" />
+                                
+                                <button type="submit" class="btn btn-primary float-end mx-2 mb-2">Guardar</button>
+                                <a asp-controller="Agente" asp-action="Index" class="btn btn-warning float-end mb-2">Volver atras</a>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+

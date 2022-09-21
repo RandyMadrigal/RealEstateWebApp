@@ -1,0 +1,207 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.MejorasCategory;
+@using RealEstateApp.Core.Application.ViewModels.Propiedades;
+
+@model SavePropiedadesVm
+
+@{
+    ViewData["Title"] = "Propiedad";
+
+    bool editMode = Model.Id == 0 ? false : true;
+    
+}
+
+
+<div class="container my-5">
+
+    <div class="row">
+        <div class="col-md-8 offset-2">
+
+            <div class="card">
+
+                <div class="card-header bg-dark text-white text-center rounded-end rounded-start">
+                    <h3>@(editMode ? $"Editando la propiedad" : "Creando una nueva propiedad") </h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="post" asp-controller="Agente" asp-action="@(editMode ? "Edit":"Create")" enctype="multipart/form-data">
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <label asp-for="Descripcion" class="form-label fw-bold"> Descripcion: </label>
+                                <textarea asp-for="Descripcion" class=" form-control" placeholder="Descripcion de la propiedad"> </textarea>
+                                <span asp-validation-for="Descripcion" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="mb-3">
+                                    <label asp-for="TipoPropiedadId" class="form-label fw-bold">Tipo de Propiedad: </label>
+                                    <select asp-for="TipoPropiedadId" asp-items="@(new SelectList(Model.TiposPropiedades,"Id","Name"))" class="form-select">
+                                        <option value="0">Seleccione una opcion</option>
+
+                                    </select>
+                                    <span asp-validation-for="TipoPropiedadId" class="text-danger"></span>
+
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="TipoVentaId" class="form-label fw-bold">Tipo de Venta: </label>
+                                    <select asp-for="TipoVentaId" asp-items="@(new SelectList(Model.TiposVentas,"Id","Name"))" class="form-select">
+                                        <option value="0">Seleccione una opcion</option>
+
+                                    </select>
+                                    <span asp-validation-for="TipoVentaId" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="CantidadHabitaciones" class="form-label fw-bold">Cantidad de Habitaciones: </label>
+                                    <input asp-for="CantidadHabitaciones" class="form-control">
+                                    <span asp-validation-for="CantidadHabitaciones" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="Dimensiones" class="form-label fw-bold">Dimensiones de la propiedad: </label>
+                                    <input asp-for="Dimensiones" class="form-control">
+                                    <span asp-validation-for="Dimensiones" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="mb-3">
+                                    <label asp-for="Direccion" class="form-label fw-bold">Direccion: </label>
+                                    <input asp-for="Direccion" class="form-control">
+                                    <span asp-validation-for="Direccion" class="text-danger"></span>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label asp-for="Precio" class="form-label fw-bold">Precio: </label>
+                                    <input asp-for="Precio" min="0" step="any" class="form-control" placeholder="Moneda Local">
+                                    <span asp-validation-for="Precio" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="CantidadBaños" class="form-label fw-bold">Cantidad de Baños: </label>
+                                    <input asp-for="CantidadBaños" class="form-control">
+                                    <span asp-validation-for="CantidadBaños" class="text-danger"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                            <hr />
+                        </div>
+
+
+                        <div class="row">
+                            <div class=" col-md-6">
+
+                                <div class="mb-3">
+                                    <label asp-for="FileMain" class="form-label fw-bold">Imagen principal de la Propiedad: </label>
+                                    @if (editMode)
+                                    {
+                                        <input asp-for="FileMain" class="form-control" />
+                                    }
+                                    else
+                                    {
+                                        <input required asp-for="FileMain" class="form-control" />
+                                    }
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label asp-for="File2" class="form-label fw-bold">Imagen de la Propiedad: </label>
+                                    @if (editMode)
+                                    {
+                                        <input asp-for="File2" class="form-control" />
+                                    }
+                                    else
+                                    {
+                                        <input required asp-for="File2" class="form-control" />
+                                    }
+                                </div>
+
+                            </div>
+
+                            <div class=" col-md-6">
+
+                                <div class="mb-3">
+                                    <label asp-for="File3" class="form-label fw-bold">Imagen de la Propiedad: </label>
+                                    @if (editMode)
+                                    {
+                                        <input asp-for="File3" class="form-control" />
+                                    }
+                                    else
+                                    {
+                                        <input required asp-for="File3" class="form-control" />
+                                    }
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="File4" class="form-label fw-bold">Imagen de la Propiedad: </label>
+                                    @if (editMode)
+                                    {
+                                        <input asp-for="File4" class="form-control" />
+                                    }
+                                    else
+                                    {
+                                        <input required asp-for="File4" class="form-control" />
+                                    }
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <hr />
+                            </div>
+
+                            <label class="form-label fw-bold">Mejoras del sistema: </label>
+                            <span asp-validation-for="TipoMejoraId" class="text-danger"></span>
+                            <div class=" col-md-12 mb-3 hstack gap-3  ">
+                                @foreach (MejorasVm item in ViewBag.MejorasPropiedades)
+                                {
+                                    <div class="form-check ">
+
+                                        <input class="form-check-input" asp-for="TipoMejoraId" value="@item.Id" type="radio" name="TipoMejoraId" id="TipoMejoraId-@item.Id" />
+                                        <label class="form-check-label" asp-for="TipoMejoraId" for="mejora-@item.Id"> @item.Name </label>
+
+                                    </div>
+                                }
+                            </div>
+
+                        </div>
+
+                        <div>
+                            <hr />
+                        </div>
+
+                        <div class="my-2">
+
+                            <a asp-controller="Agente" asp-action="Index"
+                               class="btn btn-danger float-end mx-3">volver atras</a>
+
+                            <input type="hidden" asp-for="Id" />
+                            <input type="hidden" asp-for="Codigo" />
+
+                            <button type="submit" class="btn btn-primary float-end">Guardar</button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

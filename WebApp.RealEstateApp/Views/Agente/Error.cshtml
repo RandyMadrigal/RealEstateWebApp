@@ -1,0 +1,25 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.TipoPropiedadCategory;
+@using RealEstateApp.Core.Application.ViewModels.VentaCategory;
+@using RealEstateApp.Core.Application.ViewModels.MejorasCategory;
+@using RealEstateApp.Core.Application.ViewModels.Propiedades
+
+@model ErrorVm;
+
+@{
+    ViewData["Title"] = "ERROR";
+}
+
+<div class="row mt-5">
+    <div class="col-8 offset-2">
+
+        <div class="card-body">
+
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                <h3 class="text-muted">@Html.Raw(Model.Error) </h3>
+                <a class="btn btn-primary" asp-controller="Agente" asp-action="Index"> Volver atras</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>

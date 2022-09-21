@@ -1,0 +1,40 @@
+﻿@using RealEstateApp.Infrastructure.Identity.Entities;
+
+@model ApplicationUser
+
+@{
+    bool editMode = Model.EmailConfirmed;
+    ViewData["Title"] = "Active Admin";
+}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8 offset-2 mt-5">
+
+            <div class="card bg-dark bg-gradient text-white text-center animate__animated animate__fadeIn">
+                <div class="card-header">
+                    <h4> @(editMode ? $"¿Deseas desactivar el usuario? {@Model.UserName}" : $"¿Deseas Activar el usuario? {@Model.UserName}" ) </h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="post" asp-controller="Admin" asp-action="ActiveUserPost">
+
+                        <button type="submit" class="btn btn-primary"> Aceptar </button>
+
+                        <a asp-controller="Admin" asp-action="Administradores"
+                           class="btn btn-danger mx-2"> Volver atras </a>
+
+                        <input type="hidden" asp-for="Id" />
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,95 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.User
+
+@model EditAdmin
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container my-5">
+
+    <div class="row">
+
+        <div class="col-md-6 offset-3 my-5 fw-bold text-white">
+
+            <div class="card bg-dark bg-opacity-25 animate__animated animate__fadeIn">
+
+                <div class="card-header bg-dark bg-opacity-50 text-white text-center rounded-end rounded-start">
+                    <h3> Editar usuario @Model.Username </h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="post" asp-controller="User" asp-action="Edit">
+
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="col-6">
+
+                                    <div class="my-4 ">
+                                        <label asp-for="FirstName" class="form-label"> Nombre: </label>
+                                        <input asp-for="FirstName" class="form-control">
+
+                                    </div>
+
+                                    <div class="my-4 ">
+                                        <label asp-for="Cedula" class="form-label "> Cedula: </label>
+                                        <input asp-for="Cedula" class="form-control">
+
+                                    </div>
+
+                                    <div class="my-4 ">
+                                        <label asp-for="Password" class="form-label">Password: </label>
+                                        <input asp-for="Password" class="form-control">
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="my-4 ">
+                                        <label asp-for="ConfirmPassword" class="form-label">Confirmar Password: </label>
+                                        <input asp-for="ConfirmPassword" class="form-control">
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-6">
+
+                                    <div class="my-4 ">
+                                        <label asp-for="LastName" class="form-label"> Apellido: </label>
+                                        <input asp-for="LastName" class="form-control">
+                                    </div>
+
+                                    <div class="my-4 ">
+                                        <label asp-for="Email" class="form-label "> Email: </label>
+                                        <input asp-for="Email" class="form-control">
+
+                                    </div>
+
+                                    <div class="my-4 ">
+                                        <label asp-for="Username" class="form-label "> UserName: </label>
+                                        <input asp-for="Username" class="form-control">
+
+                                    </div>
+
+                                    <div class="mt-5">
+                                        <a asp-controller="Admin" asp-action="Administradores"
+                                           class="btn btn-outline-light btn-sm float-end mx-2"> Volver atras </a>
+
+                                        <button type="submit" class="btn btn-primary btn-sm float-end"> Continuar </button>
+
+                                    </div>
+
+                                    <input type="hidden" asp-for="Id" />
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

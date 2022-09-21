@@ -1,0 +1,89 @@
+﻿@using RealEstateApp.Core.Application.Dtos.Account
+@using RealEstateApp.Infrastructure.Identity.Entities
+@using Microsoft.AspNetCore.Http;
+@using RealEstateApp.Core.Application.Helpers;
+
+@inject IHttpContextAccessor httpContext;
+
+@model List<ApplicationUser>
+
+@{
+    var User = httpContext.HttpContext.Session.Get<AuthenticationResponse>("user"); //Sesion
+    ViewData["Title"] = "Desarrolladores";
+}
+
+<div class="container-fluid text-white">
+
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12 text-center">
+            <h3>Administracion de usuarios</h3>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 text-center">
+            <a asp-controller="User" asp-action="RegisterDevelop" class="btn btn-success float-end "> Agregar nuevo Usuario Desarrollador </a>
+        </div>
+    </div>
+
+
+    <div class="row my-3">
+
+        <div class=" col-md-10 offset-1 my-2 table-responsive animate__animated animate__fadeIn">
+
+            <table class="table table-hover table-bordered text-center">
+                <caption class="text-white">Listado de Desarrolladores</caption>
+                <thead class="table-success">
+                    <tr>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Activar/Deshabilitar</th>
+                        <th scope="col">Editar</th>
+
+                    </tr>
+                </thead>
+                @foreach (ApplicationUser item in Model)
+                {
+                    <tbody>
+
+                        @if (User.Email != item.Email)
+                        {
+                            <tr class="text-dark table-secondary ">
+                                <td>@item.UserName</td>
+                                <td>@item.FirstName</td>
+                                <td>@item.LastName</td>
+                                <td>@item.Cedula</td>
+                                <td>@item.Email</td>
+                                                              
+
+                                @if (item.EmailConfirmed != true)
+                                {
+                                    <td> <a asp-controller="Admin" asp-action="ActiveDevelop" asp-route-Id="@item.Id" class="btn btn-outline-primary">Active</a> </td>
+
+                                }
+
+                                @if (item.EmailConfirmed == true)
+                                {
+                                    <td> <a asp-controller="Admin" asp-action="ActiveDevelop" asp-route-Id="@item.Id" class="btn btn-outline-danger">Disabled</a> </td>
+                                }
+
+                                <td> <a asp-controller="User" asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-outline-info">Editar</a> </td>
+
+
+                            </tr>
+                        }
+
+                    </tbody>
+                }
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

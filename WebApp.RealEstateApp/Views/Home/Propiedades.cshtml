@@ -1,0 +1,93 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.Propiedades;
+
+@model List<PropiedadesVm>
+
+@{
+    ViewData["Title"] = "Propiedades";
+}
+
+<div class="container">
+
+    <div class="row mb-2">
+
+        <div class="card text-bg-dark ">
+
+            <div class=" col-md-12 card-title fw-bold ">
+                <h2 class="text-center"> propiedades </h2>
+            </div>
+
+        </div>
+
+        <div class="col-md-12 mt-3">
+            <a asp-controller="Home" asp-action="Agentes" role="button" class="btn btn-warning float-end">Volver atras </a>
+        </div>
+
+    </div>   
+
+</div>
+
+<div class="container-fluid">
+
+    <div class="row mt-2">
+
+       
+
+            @if (Model == null || Model.Count == 0)
+            {
+                <h2 class="text-white mx-5 my-5">No se han publicado Propiedades </h2>
+            }
+            else
+            {
+
+                @foreach (PropiedadesVm item in Model)
+                {
+                    <div class="col-md-3 my-2">
+
+                        <div class="card bg-dark bg-gradient text-white text-center">
+                            <img src="@item.ImgMain" class="rounded mx-auto d-block img-size-perfil" alt="No disponible">
+
+                            <div class="card-body">
+
+                                <h6 class="card-title fw-bold text-center"> @item.TipoPropiedadName </h6>
+
+                                <p class="card-text"> @item.Direccion </p>
+
+                                <h6 class="fw-bold">Codigo</h6>
+
+                                <p class="card-text">  @item.Codigo </p>
+
+
+                                <p class="card-text fw-bold"> "@item.TipoVentaName" </p>
+                                <p class="card-text"> RD$ @item.Precio </p>
+
+                                <div>
+                                    <hr />
+                                </div>
+
+                                <div class="d-flex justify-content-around">
+
+                                    <i class="fa-solid fa-building"> @item.Dimensiones Mts </i>
+
+                                    <i class="fa-solid fa-bed"> @item.CantidadHabitaciones </i>
+
+                                    <i class="fa-solid fa-toilet"> @item.CantidadBaños </i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-footer bg-dark bg-gradient">
+
+                            <a class="btn btn-sm btn-outline-info" asp-controller="Home" asp-action="Details" asp-route-Codigo="@item.Codigo">Ver mas</a>
+
+                        </div>
+
+                    </div>
+                }
+            }
+
+    </div>
+</div>
+

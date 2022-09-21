@@ -1,0 +1,69 @@
+﻿@using RealEstateApp.Core.Application.ViewModels.Propiedades
+
+@model SavePropiedadesVm;
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-6 offset-3">
+            <div class="card">
+                <div class="card-header bg-dark bg-gradient text-white">
+                    <h4>Esta seguro que desea eliminar esta propiedad?</h4>
+                </div>
+                <div class="card-body">
+
+                    <form method="post" asp-controller="Agente" asp-action="DeletePost">
+
+                        <input type="hidden" asp-for="Id" />
+
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+                        <a asp-controller="Agente" asp-action="Index" class="btn btn-warning">Cancelar</a>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6 offset-3 my-3">
+            <div id="RealEstateCarousel" class="carousel slide w-75" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="@Model.ImgMain" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="@Model.Img2" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="@Model.Img3" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="@Model.Img4" class="d-block w-100" alt="...">
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#RealEstateCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#RealEstateCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
